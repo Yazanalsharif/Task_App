@@ -81,7 +81,7 @@ router.get("/users/me", auth,  async (req, res) => {
     }catch(error) {
         res.status(500).send(error);
     }
-    
+
 })
 //get user by id
 router.get("/users/:id", async (req, res) => {
@@ -109,7 +109,6 @@ router.get('/users/:id/avatar', async (req, res) => {
         res.set({'Content-Type' : 'image/png'});
         res.send(user.avatar);
     }catch(error) {
-       
         res.status(400).send({error:error.message});
     }
 })
